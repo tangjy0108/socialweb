@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Noto+Sans+TC:wght@300;400;500;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { background: #faf8f4; }
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  padding: 0 48px;
+}
+.nav-links {
+  display: flex;
+  gap: 6px;
+  list-style: none;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  /* Nav 變兩行，撐高度 */
+  .nav-inner {
+    height: auto;
+    min-height: 64px;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  .nav-links a,
+  .nav-links button {
+    font-size: 13px !important;
+    padding: 5px 10px !important;
+  }
+
+  /* 所有頁面的 main 頂部留夠空間給兩行 nav */
+  main {
+    padding-top: 130px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* 首頁兩欄 → 單欄 */
+  .home-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  footer {
+    padding: 16px 20px !important;
+    flex-direction: column !important;
+    gap: 6px !important;
+    text-align: center !important;
+  }
+}
